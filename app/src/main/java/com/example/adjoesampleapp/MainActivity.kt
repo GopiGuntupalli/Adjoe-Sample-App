@@ -8,6 +8,8 @@ import io.adjoe.sdk.AdjoeInitialisationListener
 import io.adjoe.sdk.AdjoeNotInitializedException
 import kotlinx.android.synthetic.main.activity_main.*
 
+const val TAG = "AdjoeSampleApp"
+
 class MainActivity : AppCompatActivity() {
     companion object {
         private const val ADJOE_API_KEY = "90ae07658e27a4e1db494e46d3522049"
