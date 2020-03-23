@@ -1,6 +1,7 @@
 package com.example.adjoesampleapp
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import io.adjoe.sdk.Adjoe
 import io.adjoe.sdk.AdjoeException
@@ -8,15 +9,16 @@ import io.adjoe.sdk.AdjoeInitialisationListener
 import io.adjoe.sdk.AdjoeNotInitializedException
 import kotlinx.android.synthetic.main.activity_main.*
 
-const val TAG = "AdjoeSampleApp"
 
 class MainActivity : AppCompatActivity() {
     companion object {
+        private const val TAG = "Sample_Activity"
         private const val ADJOE_API_KEY = "90ae07658e27a4e1db494e46d3522049"
         private const val USER_ID = "232964276"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        Log.d(TAG, "onCreate")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }

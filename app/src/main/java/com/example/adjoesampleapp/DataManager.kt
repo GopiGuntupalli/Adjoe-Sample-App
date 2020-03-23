@@ -10,6 +10,7 @@ import java.lang.ref.WeakReference
 import kotlin.concurrent.timer
 
 class DataManager(con: Context) {
+    private val TAG = "Sample_DataManager"
     private val contextRef = WeakReference(con)
     init {
         writeData(0)
@@ -23,6 +24,7 @@ class DataManager(con: Context) {
                 val inputStreamReader = InputStreamReader(fileInput)
                 val bufferedReader = BufferedReader(inputStreamReader)
                 val data: Int = bufferedReader.readLine().toInt()
+                inputStreamReader.close()
                 Log.d(TAG, "data: $data")
 
                 writeData(data + 1)
